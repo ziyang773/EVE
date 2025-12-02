@@ -1,0 +1,16 @@
+Package: EVE
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Ning", "Hao", , "nhao@math.arizona.edu", role = "aut"),
+    person(c("Yue", "Selena"), "Niu", role = "aut"),
+    person("Han", "Xiao", role = "aut"),
+    person("Ziyang", "Liu", , "ziyang773@arizona.edu", role = "cre")
+  )
+Description: Equivariant Variance Estimation for Multiple Change-point Model. arXiv:2108.09431.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+URL: https://github.com/ziyang773/EVE
+BugReports: https://github.com/ziyang773/EVE/issues
