@@ -52,7 +52,7 @@ eve(x, K = 5)
 # Compare several choices of K
 eve(x, K = c(5, 10, 15, 20))
 
-```r
+```
 ---
 
 ## Contact
