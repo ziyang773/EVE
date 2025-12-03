@@ -1,4 +1,4 @@
-source("core.r")
+library(EVE)
 
 ################################################################################
 # Other variance (standard deviation) methods used for comparison
@@ -167,7 +167,7 @@ table3
 ################################################################################
 #     Noise from real data, Table 4-5
 ################################################################################
-load("Numerical Analysis/trios.Rdata")
+load("trios.Rdata")
 
 # # we focus on chr11 of the father
 Chr       <-  father[,2]
@@ -231,12 +231,12 @@ table5
 #    Real data, table 6, Figure 2
 ################################################################################
 
-aaa <- read.csv("Numerical Analysis/lp1.csv",header=T)
+aaa <- read.csv("lp1.csv",header=T)
 aaa <- aaa[1:131,]
 n <- dim(aaa)[1]
 DUR <- aaa$DUR
 NDUR <- aaa$NDUR
-bbb <- read.csv("Numerical Analysis/lp2.csv",header=T)
+bbb <- read.csv("lp2.csv",header=T)
 bbb <- bbb[161:291,]
 NFC <- bbb$NFC
 NFBUS <- bbb$NFBUS
