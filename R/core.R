@@ -36,12 +36,18 @@ NULL
 #' Electronic Journal of Statistics, 17(2), 3811–3853. arXiv:2108.09431.
 #'
 #' @examples
-#' set.seed(1234)
-#' mu <- rep(c(rep(5, 50), rep(0, 50)), 20)
-#' x <- rnorm(1000) + mu # true standard deviation is 1.0
-#' eve(x)              # automatic selection of K
-#' eve(x, K = 5)       # user-specified K
-#' eve(x, K = c(5,10,15,20)) # compare different K values
+#' set.seed(2023)
+#' n <- 1000
+#' mu <- rep(c(rep(5, 50), rep(0, 50)), length.out = n)
+#' eps <- rnorm(n, sd=2)
+#' x <- eps + mu # true standard deviation is 1
+#'
+#' sd(eps)
+#'
+#' eve(x)              # EVE with automatic selection of K
+#' eve(x, K = 5)       # EVE with user–specified K
+#' eve(x, K = c(5,10,15,20)) # Compare several choices of K
+#'
 #'
 #' @export
 eve <- function(x, K = NULL, Kmax=20){ #If K is NULL, we will select K with Kmax = Kmax

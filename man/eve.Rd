@@ -40,12 +40,18 @@ provided, regression is performed separately for each value of \eqn{K}.
 A warning is issued if the estimated variance is negative.
 }
 \examples{
-set.seed(1234)
-mu <- rep(c(rep(5, 50), rep(0, 50)), 20)
-x <- rnorm(1000) + mu # true standard deviation is 1.0
-eve(x)              # automatic selection of K
-eve(x, K = 5)       # user-specified K
-eve(x, K = c(5,10,15,20)) # compare different K values
+set.seed(2023)
+n <- 1000
+mu <- rep(c(rep(5, 50), rep(0, 50)), length.out = n)
+eps <- rnorm(n, sd=2)
+x <- eps + mu # true standard deviation is 1
+
+sd(eps)
+
+eve(x)              # EVE with automatic selection of K
+eve(x, K = 5)       # EVE with user–specified K
+eve(x, K = c(5,10,15,20)) # Compare several choices of K
+
 
 }
 \references{
