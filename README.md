@@ -38,11 +38,13 @@ devtools::install_github("ziyang773/EVE")
 library(EVE)
 
 # 3. Example usage
-set.seed(1234)
+set.seed(2023)
 n  <- 1000
 mu <- rep(c(rep(5, 50), rep(0, 50)), length.out = n)
-x  <- rnorm(n) + mu   # true standard deviation is 1
+eps <- rnorm(n, sd=2)
+x  <- eps + mu   # true standard deviation is 1
 
+sd(eps)
 # EVE with automatic selection of K
 eve(x)
 
